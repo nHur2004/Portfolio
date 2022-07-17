@@ -1,0 +1,143 @@
+:root {
+    --primary-color: #dcbb89;
+    --secondary-color: #594225;
+    --font1-color: #401902;
+    --font2-color: #260801;
+    --bg-color: rgb(237, 224, 219);
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* Heading Styling Start */
+header {
+    padding: 30px 35px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    z-index: 3;
+}
+
+header h1 {
+    font-weight: bolder;
+    font-size: 40px;
+    color: var(--font1-color);
+    margin: 0;
+}
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 10px;
+    border-bottom: 3px solid var(--font1-color);
+    font-size: 1.55vw;
+}
+
+header nav ul li a {
+    width: 80%;
+    font-weight: lighter;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--font1-color);
+}
+
+body {
+    color: var(--font2-color);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+}
+/* Heading Styling End */
+
+/* Footer Styling Start */
+footer {
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: var(--font1-color);
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    text-decoration: none;
+}
+/* Footer Stylign End */
+
+/* Hero Styling */
+.hero {
+    background-image: url(./images/hero.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    z-index: -1;
+}
+
+.hero-accessory {
+    padding: 10px 10px 10px;
+}
+
+.hero h3 {
+    position: absolute;
+    right: 100px;
+    top: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    padding: 10px 20px;
+    color: var(--font1-color);
+    border: 3px solid var(--font1-color);
+    background-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0,0, 0,0.5);
+    z-index: 2;
+}
+
+.hero img {
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid var(--font1-color);
+    border-radius: 5%;
+    box-shadow: 0 0 5px rgba(0,0, 0,0.5);
+    z-index: 1;
+}
+/* End Hero Styling */
+
+/* About Me Styling Start */
+
+/* About Me Styling End */
+
+/* Work Styling Start */
+
+/* Work Styling End */
+
+/* Contact Styling Start */
+
+/* Contact Styling End */
+
+/* Media Queries */
