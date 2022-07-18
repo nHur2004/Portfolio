@@ -52,12 +52,24 @@ header nav ul li {
 
 header nav ul li a {
     width: 80%;
+    padding: 5px 10px;
     font-weight: lighter;
 }
 
+header nav ul li a:hover {
+    background-color: var(--font1-color);
+    color: var(--primary-color);
+}
+
 header a {
+    padding: 5px 10px;
     text-decoration: none;
     color: var(--font1-color);
+}
+
+header a:hover {
+    color: var(--primary-color);
+    background-color: var(--font1-color);
 }
 
 body {
@@ -73,7 +85,7 @@ footer {
     width: 100%;
     padding: 40px 35px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -100,15 +112,15 @@ footer a {
 }
 
 .hero-accessory {
-    padding: 10px 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 40px 15px 0px;
 }
 
 .hero h3 {
     position: absolute;
-    right: 100px;
-    top: 250px;
-    display: flex;
-    flex-wrap: wrap;
+    right: 130px;
+    top: 260px;
     margin: 10px 0;
     padding: 10px 20px;
     color: var(--font1-color);
@@ -119,8 +131,6 @@ footer a {
 }
 
 .hero img {
-    display: flex;
-    flex-wrap: wrap;
     border: 3px solid var(--font1-color);
     border-radius: 5%;
     box-shadow: 0 0 5px rgba(0,0, 0,0.5);
@@ -128,16 +138,200 @@ footer a {
 }
 /* End Hero Styling */
 
-/* About Me Styling Start */
+/* Content Styling */
+.content {
+    width: 100%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
+.content-title {
+    width: 25%;
+    padding: 20px 20px;
+    font-size: 50px;
+    text-align: right;
+    color: var(--font2-color);
+}
+
+.content-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: var(--font2-color);
+}
+
+.right-border {
+    border-right: 5px solid var(--font2-color);
+}
+
+/* About Me Styling Start */
+#about p {
+    flex: 1;
+}
 /* About Me Styling End */
 
 /* Work Styling Start */
+#work .content-content {
+    margin: 0 auto;
+    justify-content:space-around;
+}
 
+.project {
+    position: relative;
+    width: auto;
+    margin: 10px 10px;
+    background-color: var(--primary-color);
+    border: 5px solid var(--primary-color);
+}
+
+.first-project{
+    width: 91.5%;
+}
+
+.project img {
+    transition: 0.25s ease;
+    width: 500px;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+    z-index: 1;
+}
+
+.first-project img {
+    width: 100%;
+    object-position: center;
+}
+
+.project img:hover {
+    transition: .25s ease;
+    opacity: 0.3;
+}
+
+.project .desc {
+    position: absolute;
+    top: 30%;
+    padding: 15px 10px;
+    text-align: left;
+    background-color: var(--primary-color);
+    z-index: 2;
+}
+
+.first-project .desc {
+    top: 77%;
+}
 /* Work Styling End */
 
 /* Contact Styling Start */
+#contact .content-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+#contact ul li {
+    font-size: 25px;
+    border-bottom: 3px solid var(--font1-color);
+}
+
+#contact ul li a {
+    padding: 5px 10px;
+    color: var(--font1-color);
+    text-decoration: none;
+}
+
+#contact ul li a:hover {
+    background-color: var(--font2-color);
+    color: var(--bg-color);
+}
 
 /* Contact Styling End */
 
 /* Media Queries */
+/* keeps footer note invisible for any screen larger than 980px */
+@media screen and (min-width: 980px) {
+    footer a {
+        opacity: 0;
+    }
+}
+
+/* media query for smaller computer screens */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 10;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    .hero h3 {
+        right: 175px;
+        top: 300px;
+    }
+
+    #about p {
+        padding: 10px 30px;
+    }
+
+    .project,
+    .first-project {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .project a img,
+    .first-project a img {
+        height: 150px;
+        width: 150%;
+        object-fit: cover;
+        object-position: right;
+        overflow: hidden;
+    }
+
+    .first-project .desc {
+        top: 30%;
+    }
+}
+
+/* media query for tablets and smaller */
+@media screen and (max-width: 768px) {
+    .content-title {
+        font-size: 30px;
+    }
+
+    #contact ul li a,
+    #contact ul li {
+        font-size: 20px;
+    }
+}
+
+/* media query for phones and smaller */
+@media screen and (max-width: 575px) {
+    .content-title {
+        font-size: 25px;
+    }
+
+    #contact ul li a,
+    #contact ul li {
+        font-size: 20px;
+    }
+}
