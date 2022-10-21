@@ -197,7 +197,7 @@ footer a {
     width: 500px;
     height: 100%;
     object-fit: cover;
-    object-position: right;
+    object-position: left;
     z-index: 1;
 }
 
